@@ -13,7 +13,7 @@ namespace PublicTransportByLand
   {
     void GoBy()
     {
-      cout << "I went by CAR";
+      cout << "I drove a CAR";
     }
   };
 
@@ -21,7 +21,7 @@ namespace PublicTransportByLand
   {
     void GoBy()
     {
-      cout << "I went by BUS";
+      cout << "I drove a BUS";
     }
   };
 }
@@ -36,7 +36,7 @@ namespace PublicTransportBySea
   {
     void GoBy()
     {
-      cout << "I sailed by the BOAT";
+      cout << "I sailed on a BOAT";
     }
   };
 }
