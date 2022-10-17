@@ -4,10 +4,8 @@
 using namespace std;
  
 int main () {
-   //Buffer for our data
    char data[100]; 
 
-   // Open a file in write mode
    ofstream outfile;
    outfile.open("TextFile.txt");
 
@@ -15,7 +13,6 @@ int main () {
    cout << "Enter your name: ";
    cin >> data;
 
-   // write inputted data into the file.
    outfile << data << endl;
 
    cout << "Enter your age: "; 
