@@ -46,7 +46,7 @@ jobs:
 
     - name: Check output
       run: |
-        if grep -q "Hello World" output.txt; then
+        if grep -q "^Hello World$" output.txt; then
           echo "Program output is correct"
           exit 0
         else
