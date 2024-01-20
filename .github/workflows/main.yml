@@ -38,11 +38,9 @@ jobs:
         # g++ -o main Main.cpp
         # clang -o main Main.c
         # clang++ -o main Main.cpp
-      working-directory: /home/runner/work/CPP-Programming/Assignments/Ex3
 
     - name: Run program
       run: ./main > output.txt
-      working-directory: /home/runner/work/CPP-Programming/Assignments/Ex3
 
     - name: Check output
       run: |
@@ -53,4 +51,3 @@ jobs:
           echo "Program output is incorrect"
           exit 1
         fi
-      working-directory: /home/runner/work/CPP-Programming/Assignments/Ex3
