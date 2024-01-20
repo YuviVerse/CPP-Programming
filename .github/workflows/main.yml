@@ -5,10 +5,10 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     defaults: 
       run:
-        working-directory: Assignments\EX3
+        working-directory: ./Assignments
 
     steps:
     - uses: actions/checkout@v4
@@ -22,16 +22,6 @@ jobs:
     #   run: |
     #     # Add commands to install GCC 12.3.0
     #     # This might involve adding a PPA, downloading the GCC source, and compiling it
-
-    # - name: Install LLVM/Clang/LLD/LLDB 16.0.4
-    #   run: |
-    #     # Add commands to install LLVM/Clang/LLD/LLDB 16.0.4
-    #     # This might involve adding a repository or downloading and compiling from source
-
-    # - name: Install MinGW-w64 11.0.0 (UCRT)
-    #   run: |
-    #     # Add commands to install MinGW-w64 11.0.0 (UCRT)
-    #     # This might involve downloading and installing from a specific source
 
     - name: Compile C/C++ code
       run: |
