@@ -34,7 +34,7 @@ jobs:
         gcc --version
         clang --version
         # Replace the following commands with your actual build commands
-        gcc -o main *.c
+        gcc *.c -o main 
         # g++ -o main Main.cpp
         # clang -o main Main.c
         # clang++ -o main Main.cpp
