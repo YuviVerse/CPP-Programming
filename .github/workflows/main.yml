@@ -40,7 +40,9 @@ jobs:
         # clang++ -o main Main.cpp
 
     - name: Run program
-      run: ./main > output.txt
+      run: |
+        ./main > output.txt
+        echo output.txt
 
     - name: Check output
       run: |
