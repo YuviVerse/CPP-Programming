@@ -34,13 +34,15 @@ jobs:
         gcc --version
         clang --version
         # Replace the following commands with your actual build commands
-        gcc
+        gcc *.c -o main 
         # g++ -o main Main.cpp
         # clang -o main Main.c
         # clang++ -o main Main.cpp
+      working-directory: /home/runner/work/CPP-Programming/Assignments/EX3
 
     - name: Run program
       run: ./main > output.txt
+      working-directory: /home/runner/work/CPP-Programming/Assignments/EX3
 
     - name: Check output
       run: |
@@ -51,3 +53,4 @@ jobs:
           echo "Program output is incorrect"
           exit 1
         fi
+      working-directory: /home/runner/work/CPP-Programming/Assignments/EX3
