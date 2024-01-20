@@ -8,7 +8,7 @@ jobs:
 
     defaults: 
       run:
-        working-directory: ./Assignments
+        working-directory: ./Assignments/EX3
 
     steps:
     - uses: actions/checkout@v4
