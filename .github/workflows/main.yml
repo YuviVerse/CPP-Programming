@@ -42,7 +42,7 @@ jobs:
     - name: Run program
       run: |
         ./main > output.txt
-        echo output.txt
+        cat output.txt
 
     - name: Check output
       run: |
