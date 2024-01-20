@@ -1,46 +1,29 @@
-name: C/C++ CI with Specific Compiler Versions
+name: C/C++ CI
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  build-and-run:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y build-essential software-properties-common
+    - name: Set up C/C++ environment
+      uses: actions/setup-cpp@v1
 
-    - name: Install GCC 12.3.0
-      run: |
-        # Add commands to install GCC 12.3.0
-        # This might involve adding a PPA, downloading the GCC source, and compiling it
-
-    - name: Install LLVM/Clang/LLD/LLDB 16.0.4
-      run: |
-        # Add commands to install LLVM/Clang/LLD/LLDB 16.0.4
-        # This might involve adding a repository or downloading and compiling from source
-
-    - name: Install MinGW-w64 11.0.0 (UCRT)
-      run: |
-        # Add commands to install MinGW-w64 11.0.0 (UCRT)
-        # This might involve downloading and installing from a specific source
+    - name: Change to Assignment Directory
+      run: cd Assignments/Ex3
 
     - name: Compile C/C++ code
       run: |
-        gcc --version
-        clang --version
-        # Replace the following commands with your actual build commands
-        gcc *.c -o main 
-        # g++ -o main Main.cpp
-        # clang -o main Main.c
-        # clang++ -o main Main.cpp
+        gcc -o main *.c
+        # Or use g++ for C++ files: g++ -o main Main.cpp
+      working-directory: Assignments/Ex3
 
     - name: Run program
       run: ./main > output.txt
+      working-directory: Assignments/Ex3
 
     - name: Check output
       run: |
@@ -51,3 +34,4 @@ jobs:
           echo "Program output is incorrect"
           exit 1
         fi
+      working-directory: Assignments/Ex3
